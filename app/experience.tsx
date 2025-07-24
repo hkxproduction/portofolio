@@ -71,10 +71,10 @@ const items = [
 
 export default function Experience() {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto min-h-screen px-4 sm:px-6 md:px-10">
       <div className="grid grid-cols-12">
-        <div className="col-span-12 md:col-span-6 m-10 md:m-20">
-          <div className="flex items-center gap-2">
+        <div className="col-span-12 md:col-span-6 mt-10 md:mt-20 mb-10 md:mb-16">
+          <div className="flex items-center gap-2 flex-wrap">
             <h1 className="text-2xl text-white font-bold">Experience</h1>
             <RotatingText
               texts={["Competitive", "Study Independent", "Intership"]}
@@ -91,6 +91,7 @@ export default function Experience() {
           </div>
         </div>
       </div>
+
       <div>
         <ChromaGrid
           items={items}

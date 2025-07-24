@@ -61,7 +61,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen container mx-auto px-4 text-white text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen container mx-auto px-4 text-white text-center pt-16 pb-20">
       <div className="mb-10">
         <div className="flex items-center justify-center gap-2">
           <h1 className="text-2xl font-bold">Contact</h1>
@@ -81,7 +81,7 @@ export default function Contact() {
       </div>
 
       <div
-        className="flex justify-center"
+        className="flex justify-center flex-wrap gap-10"
         onClick={(e) => {
           const target = e.target as HTMLElement;
           const button = target.closest("button");
@@ -94,13 +94,13 @@ export default function Contact() {
           const index = buttons.indexOf(button);
 
           if (items[index] && typeof items[index].onClick === "function") {
-            items[index].onClick(); // <- pastikan dipanggil sebagai fungsi
+            items[index].onClick();
           }
         }}
       >
         <GlassIcons
           items={items}
-          className="gap-[6em] [&>button]:w-[10em] [&>button]:h-[10em] [&>button>span:last-child]:text-lg"
+          className="gap-[4em] [&>button]:w-[8em] [&>button]:h-[8em] [&>button>span:last-child]:text-base"
         />
       </div>
     </div>

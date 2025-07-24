@@ -7,10 +7,11 @@ import BlurText from "./components/BlurText/BlurText";
 
 export default function Hero() {
   return (
-    <div className="container mx-auto h-screen">
-      <div className="grid grid-cols-12">
-        <div className="col-span-12 md:col-span-6 m-10 md:m-20">
-          <div className="flex items-center gap-2">
+    <div className="container mx-auto min-h-screen px-4 sm:px-6 md:px-10">
+      <div className="grid grid-cols-12 items-center">
+        {/* Kiri - Teks */}
+        <div className="col-span-12 md:col-span-6 mt-10 md:mt-20">
+          <div className="flex items-center gap-2 flex-wrap">
             <h1 className="text-2xl text-white font-bold">I'm Keen To Start</h1>
             <RotatingText
               texts={[
@@ -30,9 +31,10 @@ export default function Hero() {
               rotationInterval={2000}
             />
           </div>
+
           <div className="mt-5">
             <TextType
-              className="text-4xl md:text-6xl font-medium text-[#00ADB5]"
+              className="text-3xl sm:text-4xl md:text-6xl font-medium text-[#00ADB5]"
               text={["I'm Hendra Kusuma", "Informatics Engineer"]}
               typingSpeed={75}
               pauseDuration={1500}
@@ -40,18 +42,21 @@ export default function Hero() {
               cursorCharacter="_"
             />
           </div>
-          <div className="mt-20">
+
+          <div className="mt-10 md:mt-20">
             <BlurText
               text="I am Hendra Kusuma, currently in my eighth semester at Gunadarma University. I specialize and have experience in web development, cloud computing, and Python projects. I am also interested in IT support, Cybersecurity, and Linux system administration."
               delay={250}
               animateBy="words"
               direction="top"
-              className="text-xl text-justify"
+              className="text-base sm:text-lg md:text-xl text-justify"
             />
           </div>
         </div>
-        <div className="col-span-12 md:col-span-6">
-          <div className="w-full flex justify-center mt-20">
+
+        {/* Kanan - Kartu Profil */}
+        <div className="col-span-12 md:col-span-6 mt-10 md:mt-20">
+          <div className="w-full flex justify-center">
             <ProfileCard
               name="Hendra Kusuma"
               title="Informatics Engineer"
